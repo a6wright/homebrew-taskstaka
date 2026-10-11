@@ -41,6 +41,6 @@ class Taskstaka < Formula
     system bin/"taskstaka", "init"
     system bin/"taskstaka", "add", "Brew test task"
     assert_match "Brew test task", shell_output("#{bin}/taskstaka next")
-    assert_predicate testpath/"todo/index.md", :exist?
+    assert_path_exists testpath/"todo/index.md"
   end
 end
