@@ -1,8 +1,8 @@
 class Taskstaka < Formula
   desc "What-needs-action-next task server backed by markdown, with a menu bar item"
   homepage "https://github.com/a6wright/taskstaka"
-  url "https://github.com/a6wright/taskstaka/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "cbc868f7c6b74dbbbf660e04744de975acbc90914327f67db7ce815f9323a21e"
+  url "https://github.com/a6wright/taskstaka/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "829bfdc05533dd4f8ebd409d0bb56eda49708308978146816711d592d926a29d"
   license "MIT"
   head "https://github.com/a6wright/taskstaka.git", branch: "main"
 
@@ -14,7 +14,7 @@ class Taskstaka < Formula
   end
 
   # The daemon. `crashed: true` (not `keep_alive true`) so `taskstaka stop` sticks;
-  # taskstaka's own stop/restart/status recognise the homebrew.mxcl.taskstaka label.
+  # taskstaka's own stop/restart/status recognise the sh.brew.taskstaka label.
   service do
     run [opt_bin/"taskstaka", "serve"]
     keep_alive crashed: true
