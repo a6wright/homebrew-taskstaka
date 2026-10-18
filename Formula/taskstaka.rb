@@ -1,8 +1,8 @@
 class Taskstaka < Formula
   desc "What-needs-action-next task server backed by markdown, with a menu bar item"
   homepage "https://github.com/a6wright/taskstaka"
-  url "https://github.com/a6wright/taskstaka/archive/refs/tags/v0.1.3.tar.gz"
-  sha256 "0829f62190d893051fefe4e5c715d61c1614092e5fd6b2b8f57a06d11b02468e"
+  url "https://github.com/a6wright/taskstaka/archive/refs/tags/v0.1.4.tar.gz"
+  sha256 "59d8dcf9d34f2ad2d360f28c16a97456425a345d3ec17aa6e4d053b1dd0a8612"
   license "MIT"
   head "https://github.com/a6wright/taskstaka.git", branch: "main"
 
@@ -27,8 +27,12 @@ class Taskstaka < Formula
     <<~EOS
       Start the daemon at login with either
         brew services start taskstaka          # daemon only
-      or, on macOS, the menu bar item (⌥Space = quick add) plus the daemon:
-        taskstaka setup macos
+      or the menu bar item (quick-add key) plus the daemon:
+        taskstaka setup macos                  # macOS: ⌥Space
+        taskstaka setup linux                  # Linux: Alt+Space on GNOME; the item itself comes from source:
+          sudo apt install libgtk-3-dev libwebkit2gtk-4.1-dev   # or gtk3-devel webkit2gtk4.1-devel
+          cargo install --locked --git https://github.com/a6wright/taskstaka --tag v0.1.4 taskstaka-tray
+      Or everything in one line: curl -fsSL https://taskstaka.com/install.sh | sh
       Your notes live in ~/todo (taskstaka init). Claude Code: taskstaka setup claude
     EOS
   end
