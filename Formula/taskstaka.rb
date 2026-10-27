@@ -1,8 +1,8 @@
 class Taskstaka < Formula
   desc "What-needs-action-next task server backed by markdown, with a menu bar item"
   homepage "https://github.com/a6wright/taskstaka"
-  url "https://github.com/a6wright/taskstaka/archive/refs/tags/v0.1.4.tar.gz"
-  sha256 "59d8dcf9d34f2ad2d360f28c16a97456425a345d3ec17aa6e4d053b1dd0a8612"
+  url "https://github.com/a6wright/taskstaka/archive/refs/tags/v0.1.5.tar.gz"
+  sha256 "5780b27a660a2a62d50d573726a21a570dfb96ed6a7c98e3c0b88bdbea632c1f"
   license "MIT"
   head "https://github.com/a6wright/taskstaka.git", branch: "main"
 
