@@ -1,8 +1,8 @@
 class Taskstaka < Formula
   desc "What-needs-action-next task server backed by markdown, with a menu bar item"
   homepage "https://github.com/a6wright/taskstaka"
-  url "https://github.com/a6wright/taskstaka/archive/refs/tags/v0.1.7.tar.gz"
-  sha256 "d2e589cb4dc91ba5a1685bcd124afe8c7c6c6fec49be696c6434953b3cec8d83"
+  url "https://github.com/a6wright/taskstaka/archive/refs/tags/v0.1.9.tar.gz"
+  sha256 "7c6f62956758c414e77a81ea2e69d30d898e308de12f5b6e866133ad6dbff3cc"
   license "MIT"
   head "https://github.com/a6wright/taskstaka.git", branch: "main"
 
@@ -31,7 +31,7 @@ class Taskstaka < Formula
         taskstaka setup macos                  # macOS: ⌥Space
         taskstaka setup linux                  # Linux: Alt+Space on GNOME; the item itself comes from source:
           sudo apt install libgtk-3-dev libwebkit2gtk-4.1-dev   # or gtk3-devel webkit2gtk4.1-devel
-          cargo install --locked --git https://github.com/a6wright/taskstaka --tag v0.1.4 taskstaka-tray
+          cargo install --locked --git https://github.com/a6wright/taskstaka --tag v0.1.9 taskstaka-tray
       Or everything in one line: curl -fsSL https://taskstaka.com/install.sh | sh
       Your notes live in ~/todo (taskstaka init). Claude Code: taskstaka setup claude
     EOS
